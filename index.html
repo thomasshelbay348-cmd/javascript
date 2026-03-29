@@ -1,33 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        // // 01 display output
-        // console.log("Hello World");
-        // console.warn("This is a warning message");
-        // console.info("This is an informational message");
-        // console.error("This is an error message");
-        // alert("This is an alert message");
-        // console.log(25 + 20);
-
-        // // 02 variables legal and illegal names
-        var firstname ; // camel case writting
-        var FirstName ; // pascal case writting
-        var first_name ; // snake case writting
-        var first1name ; // number case writting
-        var $first$name; // symbol case writting
-        var _firstname; // underscore case writting
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <!-- <button onclick="sm()">click me!</button>2121 -->
+        <!-- <div id="demo" style=" height:100vh; width:100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. At nisi, voluptate tenetur laborum
+            error odit aliquid reprehenderit? Aliquid labore harum sapiente deserunt nisi, dolore, ipsa autem blanditiis officia, magnam aspernatur.</div>
+             -->
 
 
-        // var 1stpm ;
 
-        // /03 math operators
-        // var num1=5;
+            <!-- <input type="text" placeholder="enter your name" id="input">
+            <button onclick="click()">add on page</button>
+            <div id="memo"></div> -->
+           <!-- <fieldset>
+            <form> entry</form>
+            Name: <input type="text"><br>
+            Age: <input type="number"><br>
+            Gender: <select name="gender" id="">
+                 <option value="male" >male</option>
+                 <option value="female" >female</option>
+                
+                </select><br>
+            Education: <input type="text"><br>
+            
+                <button onclick="sb()"> submit </button>
+            
+            
+        </fieldset>
+
+        <table border="2">
+            <tr>
+                <td>name</td>
+                <td>age</td>
+                <td>education</td>
+                <td>gender</td>
+            </tr>
+            <tr>
+                <td id="name1"></td>
+                <td id="age1"></td>
+                <td id="gender1"></td>
+                <td id="education1"></td>
+            </tr>
+        </table>
+
+            <div id="shaz"></div>
+            <div id="memo"></div> -->
+
+            <input type="text" placeholder="number" id="num"><br>
+            <button onclick="ss()">submit</button>
+            <p id="rr"></p>
+            
+            
+
+            <script src="first.js"></script>
+            <script>
+
+
+        //   function sb(){
+        //    var username=document.getElementById("name").value
+        //    var age=document.getElementById("age").value
+        //    var gender=document.getElementById("gender").value
+        //    var education=document.getElementById("education").value
+
+        //    console.log(username , age , gender, education)
+        //    var name1 =document.querySelector("#name1")
+        //    var age1 =document.querySelector("#age1")
+        //    var gender1 =document.querySelector("#gender1")
+        //    var education1 =document.querySelector("#education1")
+
+
+        //    name1.innerHTML = username;
+        //    age.innerHTML = age;
+        //    gender1.innerHTML = gender;
+        //    education1.innerHTML = education;
+
+        //    document.querySelector(".mybutton").addEventListener("click",(e)=>{e.preventDefault()})
+
+        //   }
+
+
+
+
+
+            // // 01 display output
+            // console.log("Hello World");
+            // console.warn("This is a warning message");
+            // console.info("This is an informational message");
+            // console.error("This is an error message");
+            // alert("This is an alert message");
+            // console.log(25 + 20);
+            
+            // // 02 variables legal and illegal names
+            var firstname ; // camel case writting
+            var FirstName ; // pascal case writting
+            var first_name ; // snake case writting
+            var first1name ; // number case writting
+            var $first$name; // symbol case writting
+            var _firstname; // underscore case writting
+            
+            
+            // var 1stpm ;
+            
+            // /03 math operators
+            // var num1=5;
         // var num2=10;
         // var total = num1 * num2;
         // console.log(total);
@@ -176,20 +256,93 @@
 
     // (marks ===90)? console.log("you have passed") : console.log("you have not 90 marks")
     
-var education =prompt ("enter education");
-education=Number(education)
-var height = prompt ("enter height");
-height=Number(height)
-var age = prompt("enter age");
-age=Number(age)
-if (education ===90 || height ==5.8){
-    console.log("you have passed");
-}else if( age ===18 || height ==5.8){
-    console.log("you have passed")
-} else if(education === 90 || age ==18){
-    console.log("you have passed")
-}else console.log("you are fail");
+// var education =prompt ("enter education");
+// education=Number(education)
+// var height = prompt ("enter height");
+// height=Number(height)
+// var age = prompt("enter age");
+// age=Number(age)
+// if (education ===90 || height ==5.8){
+//     console.log("you have passed");
+// }else if( age ===18 || height ==5.8){
+//     console.log("you have passed")
+// } else if(education === 90 || age ==18){
+//     console.log("you have passed")
+// }else console.log("you are fail");
 
+// 08 arrays
+// var arr=[]
+// arr[0]=5
+// arr[2]=10
+// console.log(arr,typeof arr)
+
+// var arr=["subhan" ,"shahwaiz","eman","dalia"]
+// arr.Push("kinza")
+// arr.push("ali")
+// arr.pop("shahwaiz");
+// arr.push("anam","kinza")
+// arr.pop();
+
+// arr.unshift("abid ")
+// arr.unshift("asad ") 
+// arr.shift()
+// arr.splice(0,0,"amna")
+// arr.splice(1,1,)
+// arr.splice(0,1,"subhan","kinza")
+// arr[1]="ayesha"
+// var arr2=arr.slice(1,3)
+// console.log(arr2)
+
+// var arr = ["asan","kela","asim","azlan"];
+// arr.push(arr.pop())
+// arr.pop(arr.push("subhan"))
+// console.log(arr)
+// var  arr =[1,2,3,4,5,6,7,8,9,10]
+// arr[6]=5
+// arr[7]=10
+// arr[8]=15
+// arr[9]=20
+// var arr2=arr.slice(-4)
+// var arr3=arr.slice(0,2)
+// var arr4=arr.slice(-2)
+// console.log(arr[6],arr[7],arr[8],arr[9])
+// console.log(arr[0],arr[1],arr[8],arr[9])
+// console.log(arr2)
+// console.log(arr3)
+// console.log(arr4) 
+
+// var num1 = Math.round(Math.random()*10)
+// console.log(num1)
+// var guesnumber =parseInt(prompt("enter the num"))
+// var demo = document.getElementById("demo")
+// if (num1 === guesnumber){
+//     demo.style.backgroundColor="green"
+// } else{
+//     demo.style.backgroundColor="red"
+// }
+
+// json(javascript object notation)
+//15 objects
+
+// var obj1 = {
+//     "name": "adil",
+//     "age": 26,
+//     "education": "bscs",
+//     "full name": "adil ali",
+// }
+// console.log(obj1)
+// obj1.name="adeela";
+// obj1["full name"]="adeela bibi";
+// console.log(obj1.name)
+// console.log(obj1)
+
+
+// obj1["gender"]="female";
+// console.log(obj1)
+
+// console.log(obj1)
+// console.log(object.keys(obj1))
+// console.log(object.values(obj1))
     </script>
 </body>
 </html>

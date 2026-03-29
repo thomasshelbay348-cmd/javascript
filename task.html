@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+                margin: 0;
+            }
+            .container{
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background:url("assests/123.jpg");
+                background-size:cover ;
+            }
+            .card{
+                width: 200px;
+                height: 150px;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                box-shadow: 1px 2px 2px black ;
+                border-radius: 15kpx;
+                background-color: rgba(180, 238, 540, 300);
+
+
+            }
+            .card input{
+                     margin: 10px 0;
+                     border-radius: ;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <input type="text" placeholder="enter username">
+            <input type="password" placeholder="enter password">
+            <p id="error"></p>
+            <button onclick="sub()">submit</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function sub(){
+            var error = document.querySelector("#error")
+            var username = document.querySelector("#username").value
+            var password = document.querySelector("#password").value
+        }
+
+    </script>
+</body>
+</html>
