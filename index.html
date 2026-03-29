@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+    <!-- <head> -->
+        <!-- <meta charset="UTF-8"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <!-- <title>Document</title> -->
+    <!-- </head> -->
+    <!-- <body> -->
         
         <!-- <button onclick="sm()">click me!</button>2121 -->
         <!-- <div id="demo" style=" height:100vh; width:100%">Lorem ipsum dolor sit amet consectetur adipisicing elit. At nisi, voluptate tenetur laborum
@@ -51,14 +51,14 @@
             <div id="shaz"></div>
             <div id="memo"></div> -->
 
-            <input type="text" placeholder="number" id="num"><br>
-            <button onclick="ss()">submit</button>
-            <p id="rr"></p>
+            <!-- <input type="text" placeholder="number" id="num"><br> -->
+            <!-- <button onclick="ss()">submit</button> -->
+            <!-- <p id="rr"></p> -->
             
             
 
-            <script src="first.js"></script>
-            <script>
+            <!-- <script src="first.js"></script> -->
+            <!-- <script> 
 
 
         //   function sb(){
@@ -344,5 +344,139 @@
 // console.log(object.keys(obj1))
 // console.log(object.values(obj1))
     </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital and Analog Clock</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #28284e;
+            color: #ecf0f1;
+            font-family: sans-serif;
+        }
+
+        /* Toggle Button Styling */
+        #toggleBtn {
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            background: #3498db;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Digital Clock Styling */
+        #digital-clock {
+            font-size: 60px;
+            font-family: 'Courier New', monospace;
+            border: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Analog Clock Styling */
+        #analog-clock {
+            width: 250px;
+            height: 250px;
+            border: 8px solid #ecf0f1;
+            border-radius: 50%;
+            position: relative;
+            display: none; /* Hidden by default */
+        }
+
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .hour { width: 6px; height: 60px; margin-left: -3px; background: #e74c3c; }
+        .minute { width: 4px; height: 90px; margin-left: -2px; }
+        .second { width: 2px; height: 100px; margin-left: -1px; background: #3498db; }
+
+        .center-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+<body>
+    <button id="toggleBtn">Toggle Clock</button>
+    <div id="digital-clock"></div>
+    <div id="analog-clock">
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+        <div class="center-dot"></div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const digitalClock = document.getElementById('digital-clock');
+        const analogClock = document.getElementById('analog-clock');
+        const hourHand = document.querySelector('.hour');
+        const minuteHand = document.querySelector('.minute');
+        const secondHand = document.querySelector('.second');
+
+        // Function to update the clocks
+        function updateClocks() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Update Digital Clock
+            digitalClock.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            // Update Analog Clock
+            const hourAngle = (hours % 12) * 30 + (minutes / 60) * 30; // 30 degrees per hour + minute contribution
+            const minuteAngle = minutes * 6; // 6 degrees per minute
+            const secondAngle = seconds * 6; // 6 degrees per second
+
+            hourHand.style.transform = `rotate(${hourAngle}deg)`;
+            minuteHand.style.transform = `rotate(${minuteAngle}deg)`;
+            secondHand.style.transform = `rotate(${secondAngle}deg)`;
+        }
+
+        // Toggle between Digital and Analog Clock
+        toggleBtn.addEventListener('click', () => {
+            if (digitalClock.style.display !== 'none') {
+                digitalClock.style.display = 'none';
+                analogClock.style.display = 'block';
+                toggleBtn.textContent = 'Show Digital Clock';
+            } else {
+                digitalClock.style.display = 'block';
+                analogClock.style.display = 'none';
+                toggleBtn.textContent = 'Show Analog Clock';
+            }
+        });
+
+        // Initial clock update and set interval to update every second
+        updateClocks();
+        setInterval(updateClocks, 1000);
+    </script>
+    
 </body>
 </html>
